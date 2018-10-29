@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/lltbg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnOne"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="Api Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnTwo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="Dialog Test1"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/btnThree"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="Dialog Test2"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnFour"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="Dialog Test3"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnFive"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="Dialog Test4"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/btnSix"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="Snackbar Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnSeven"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="Camera Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnEight"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="RecyclerView Test"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/btnNine"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="Share Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnTen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="ViewTost Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnEleven"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="EditNumber Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnTwelve"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="VideoView Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnThirteen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="ScaleImageView Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnFourteen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="SpannableString Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnFifteen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="QrCode Test"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
