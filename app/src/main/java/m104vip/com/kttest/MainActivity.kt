@@ -190,7 +190,56 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this@MainActivity, SpannableStringActivity::class.java))
             }
             R.id.btnFifteen ->{
-                startActivityForResult(Intent(this, ScanActivity::class.java), ACTION_REQUEST_CODE )
+                val permission = Manifest.permission.CAMERA
+
+                val checkSelfPermission = ActivityCompat.checkSelfPermission(this ,permission)
+                if (checkSelfPermission  == PackageManager.PERMISSION_GRANTED ) {
+                    startActivityForResult(Intent(this, ScanActivity::class.java), ACTION_REQUEST_CODE )
+                }else{
+                    if(ActivityCompat.shouldShowRequestPermissionRationale(this ,permission) ){
+                        val PERMISSION_ALL = 1
+                        val PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
+                        ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
+                    }else{
+                        startActivityForResult(Intent(this, ScanActivity::class.java), ACTION_REQUEST_CODE )
+                    }
+                }
+            }
+            R.id.btnSixteen ->{
+                val permission1 = Manifest.permission.WRITE_EXTERNAL_STORAGE
+                val checkSelfPermission1 = ActivityCompat.checkSelfPermission(this ,permission1)
+                if (checkSelfPermission1 == PackageManager.PERMISSION_GRANTED) {
+                    val edit = EditText(this)
+                    AlertDialog.Builder(this@MainActivity)
+                            .setTitle("QrCode資料輸入")
+                            .setView(edit)
+                            .setPositiveButton("確定"){dialog, which->
+                                if(edit.text.toString().length != 0){
+                                    startActivity(Intent(this, QrCodeActivity::class.java).putExtra("data", edit.text.toString()))
+                                }
+                            }
+                            .setNegativeButton("取消"){_,_ ->}
+                            .show()
+                }else{
+                    if(ActivityCompat.shouldShowRequestPermissionRationale(this ,permission1)){
+                        val PERMISSION_ALL = 1
+                        val PERMISSIONS = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                        ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
+                    }else{
+                        val edit = EditText(this)
+
+                        AlertDialog.Builder(this@MainActivity)
+                                .setTitle("QrCode資料輸入")
+                                .setView(edit)
+                                .setPositiveButton("確定"){dialog, which->
+                                    if(edit.text.toString().length != 0){
+                                        startActivity(Intent(this, QrCodeActivity::class.java).putExtra("data", edit.text.toString()))
+                                    }
+                                }
+                                .setNegativeButton("取消"){_,_ ->}
+                                .show()
+                    }
+                }
             }
 
         }
@@ -254,13 +303,12 @@ class MainActivity : AppCompatActivity() {
 
             startActivityForResult(intent, ACTION_CAMERA_REQUEST_CODE);
         }else{
-            if(ActivityCompat.shouldShowRequestPermissionRationale(this ,permission) && ActivityCompat.shouldShowRequestPermissionRationale(this ,permission1)){
+            if(ActivityCompat.shouldShowRequestPermissionRationale(this ,permission) || ActivityCompat.shouldShowRequestPermissionRationale(this ,permission1)){
                 val PERMISSION_ALL = 1
                 val PERMISSIONS = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
                 ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
-            }else{
+            }else {
                 startCamera()
-
             }
         }
     }

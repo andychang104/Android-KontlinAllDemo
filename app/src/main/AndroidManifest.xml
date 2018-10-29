@@ -95,6 +95,15 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".QrCodeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
 
         <!--android7.0開啟相機配置方法-->

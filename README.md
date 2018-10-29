@@ -19,3 +19,4 @@ Android Kontlin 各重點功能開源Demo
 13. ImageView雙指縮放功能實作
 14. TextView部分文字變色與點擊功能實作
 15. QrCode掃瞄器功能實作
+16. QrCode圖建立功能實作

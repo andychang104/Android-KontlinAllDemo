@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class JavaActivity extends Activity{
@@ -17,6 +18,8 @@ public class JavaActivity extends Activity{
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_java);
+
+        EditText edit = new EditText(this);
 
         tvJava = (TextView) findViewById(R.id.tv_java);
 

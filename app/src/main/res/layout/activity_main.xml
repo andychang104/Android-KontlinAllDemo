@@ -169,8 +169,19 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:onClick="click"
-                android:text="QrCode Test"
+                android:text="QrCodeScan Test"
                 android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnSixteen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="QrCodeCreate Test"
+                android:textSize="16sp" />
+
 
         </LinearLayout>
 
