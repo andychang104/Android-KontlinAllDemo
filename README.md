@@ -4,8 +4,8 @@ Android Kontlin 各重點功能開源Demo
 
 1.0.0 功能如下
 
-1.OkHttp Api功能實作
-2.普通顯示Dialog功能實作
+- 1.OkHttp Api功能實作
+- 2.普通顯示Dialog功能實作
 3.列表顯示Dialog功能實作
 4.日期顯示Dialog功能實作
 5.時間顯示Dialog功能實作
