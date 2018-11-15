@@ -20,3 +20,8 @@ Android Kontlin 各重點功能開源Demo
 14. TextView部分文字變色與點擊功能實作
 15. QrCode掃瞄器功能實作
 16. QrCode圖建立功能實作
+17. Sharedpreferences存取功能實作
+18. BottomNavigationView功能實作
+19. BottomAppBar功能實作
+20. Bottom Sheets功能實作
+21. CollapsingToolBars功能實作
