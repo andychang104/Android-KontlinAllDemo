@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/ed_name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:hint="請輸入帳號"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/ed_passwd"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:hint="請輸入密碼"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:text="記住密碼"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_submit"
+        android:text="送出"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content" />
+</LinearLayout>

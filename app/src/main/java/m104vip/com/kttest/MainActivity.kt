@@ -17,6 +17,8 @@ import android.net.Uri
 import android.os.*
 import android.support.v7.app.AppCompatActivity
 import android.provider.MediaStore
+import android.support.design.chip.Chip
+import android.support.design.widget.BottomSheetDialog
 import android.util.Log
 import android.view.View
 import android.support.design.widget.Snackbar
@@ -25,10 +27,7 @@ import android.support.v4.content.ContextCompat
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import okhttp3.*
 import org.json.JSONArray
 
@@ -240,6 +239,50 @@ class MainActivity : AppCompatActivity() {
                                 .show()
                     }
                 }
+            }
+            R.id.btnSeventeen ->{
+                startActivity(Intent(this@MainActivity, SharedPreferencesActivity::class.java))
+            }
+            R.id.btnEighteen ->{
+                startActivity(Intent(this@MainActivity, BottomNavigationViewActivity::class.java))
+            }
+            R.id.btnNineteen ->{
+                startActivity(Intent(this@MainActivity, BottomAppBarActivity::class.java))
+            }
+            R.id.btnTwenty ->{
+                val dialog = BottomSheetDialog(this)
+                val view = layoutInflater.inflate(R.layout.bottomsheetdialog,null)
+
+                val chip1 = view.findViewById(R.id.chip1) as Chip
+                val chip2 = view.findViewById(R.id.chip2) as Chip
+                val chip3 = view.findViewById(R.id.chip3) as Chip
+                val chip4 = view.findViewById(R.id.chip4) as Chip
+                val chip5 = view.findViewById(R.id.chip5) as Chip
+
+                chip1.setOnClickListener({
+                    Snackbar.make(v, "測試1", Snackbar.LENGTH_SHORT).show()
+                    dialog.dismiss()})
+                chip2.setOnClickListener({
+                    Snackbar.make(v, "測試2", Snackbar.LENGTH_SHORT).show()
+                    dialog.dismiss()})
+
+                chip3.setOnClickListener({
+                    Snackbar.make(v, "測試3", Snackbar.LENGTH_SHORT).show()
+                    dialog.dismiss()})
+
+                chip4.setOnClickListener({
+                    Snackbar.make(v, "測試4", Snackbar.LENGTH_SHORT).show()
+                    dialog.dismiss()})
+
+                chip5.setOnClickListener({
+                    Snackbar.make(v, "測試5", Snackbar.LENGTH_SHORT).show()
+                    dialog.dismiss()})
+
+                dialog.setContentView(view)
+                dialog.show()
+            }
+            R.id.btnTwentyOne ->{
+                startActivity(Intent(this@MainActivity, CollapsingToolbarsActivity::class.java))
             }
 
         }

@@ -47,15 +47,15 @@ class RecyclerViewActivity: AppCompatActivity(), SwipeRefreshLayout.OnRefreshLis
         mList = ArrayList<News>();
         mRvCommonList.setOnScrollListener(object : RecyclerView.OnScrollListener() {
             var lastVisibleItem: Int? = 0
-            override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
+            override fun onScrollStateChanged(recyclerView: RecyclerView,newState: Int) {
+                super.onScrollStateChanged(recyclerView!!, newState)
                 if (newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem!! +1 == mRvCommonList.adapter?.itemCount) {
                     addData()
                 }
             }
 
-            override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView!!, dx, dy)
                 val layoutManager = recyclerView?.layoutManager as LinearLayoutManager
                 //最后一个可见的ITEM
                 lastVisibleItem = layoutManager.findLastVisibleItemPosition()
@@ -74,7 +74,7 @@ class RecyclerViewActivity: AppCompatActivity(), SwipeRefreshLayout.OnRefreshLis
     //重新整理
     override fun onRefresh() {
         mList!!.removeAll(mList!!);
-        mRvCommonList.adapter.notifyDataSetChanged()
+        mRvCommonList.adapter!!.notifyDataSetChanged()
         refreshList(this);
     }
 
@@ -123,7 +123,7 @@ class RecyclerViewActivity: AppCompatActivity(), SwipeRefreshLayout.OnRefreshLis
 
         }
 
-        class CommonHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
+        class CommonHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
             var tvTitle: TextView = itemView?.findViewById<TextView>(R.id.tvTitle) as TextView
             var tvMsg: TextView = itemView?.findViewById<TextView>(R.id.tvMsg) as TextView
             var ivPic: ImageView = itemView?.findViewById<ImageView>(R.id.ivPic) as ImageView
@@ -140,7 +140,7 @@ class RecyclerViewActivity: AppCompatActivity(), SwipeRefreshLayout.OnRefreshLis
         }
 
         uiThread {
-            mRvCommonList.adapter.notifyDataSetChanged();
+            mRvCommonList.adapter!!.notifyDataSetChanged();
         }
 
     }

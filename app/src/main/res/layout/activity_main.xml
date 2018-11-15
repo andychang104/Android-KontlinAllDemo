@@ -182,6 +182,56 @@
                 android:text="QrCodeCreate Test"
                 android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/btnSeventeen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="SharedPreferences Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnEighteen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="BottomNavigationView Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnNineteen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="BottomAppBar Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnTwenty"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="Bottom Sheets Test"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnTwentyOne"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="CollapsingToolbars Test"
+                android:textSize="16sp" />
+
 
         </LinearLayout>
 
